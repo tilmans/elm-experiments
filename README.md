@@ -4,8 +4,8 @@ Taken straight from [Ossi Hanhinen's intro](https://ohanhi.github.io/base-for-ga
 
 ## How to run
 
-  npm install
-  elm make
-  npm run build
+    npm install
+    elm make
+    npm run build
 
-Then open dist/index.html 
+Then open dist/index.html
