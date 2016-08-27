@@ -36,14 +36,17 @@ incrementShotsFired model =
 
 view : Model -> Html msg
 view model =
-  div
-    [ style
-      [ ("backgroundColor","red")
-      , ("width", "100px")
-      , ("position", "absolute")
-      , ("left", toString(model.position) ++ "px")
-      ]
-    ][ text (toString model) ]
+  div []
+    [ div [][ text (toString model) ]
+    , div
+      [ style
+        [ ("backgroundColor","green")
+        , ("width", "50px")
+        , ("position", "absolute")
+        , ("left", toString(model.position) ++ "px")
+        ]
+      ][text "Hello"]
+    ]
 
 type Msg
   = TimeUpdate Time
