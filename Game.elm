@@ -1,11 +1,13 @@
 module Game exposing (..)
 
-import Html exposing (Html, text)
+import Html exposing (..)
 import Html.App as Html
+import Html.Attributes exposing (style)
 import Keyboard exposing (KeyCode)
 import AnimationFrame
 import Time exposing (Time)
 import Key exposing (..)
+-- import Collage exposing (..)
 
 type alias Model =
     { position : Float
@@ -34,7 +36,14 @@ incrementShotsFired model =
 
 view : Model -> Html msg
 view model =
-  text (toString model)
+  div
+    [ style
+      [ ("backgroundColor","red")
+      , ("width", "100px")
+      , ("position", "absolute")
+      , ("left", toString(model.position) ++ "px")
+      ]
+    ][ text (toString model) ]
 
 type Msg
   = TimeUpdate Time
